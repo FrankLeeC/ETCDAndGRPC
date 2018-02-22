@@ -1,0 +1,19 @@
+syntax = "proto3";
+package arith;
+
+service Calculator {
+    rpc Add(Request) returns (Response) {}
+    rpc Minus(Request) returns (Response) {}
+    rpc Prod(Request) returns (Response) {}
+    rpc Divide(Request) returns (Response) {}
+}
+
+message Request {
+    int64 dig1 = 1;
+    int64 dig2 = 2;
+    int64 count = 3;
+}
+
+message Response {
+    int64 result = 1;
+}
